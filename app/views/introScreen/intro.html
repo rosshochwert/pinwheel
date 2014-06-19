@@ -1,0 +1,31 @@
+<div ng-controller="IntroCtrl" style="height:580px">
+		<ion-slide-box on-slide-changed="slideChanged(index)" class="slider">
+			<ion-slide class="slider-slide">
+				<div style="left:-5px;height:100%;width:105%;position: absolute;z-index: -10" class="bonfire blur"></div>
+				<div class="white" style="z-index: 10;padding-top:75px;position: absolute;">
+					<h3 class="white">Discover what's happening around you with </h3><br />
+					<h1 class="white">The Move</h1>
+				</div>
+			</ion-slide>
+			<ion-slide class="slider-slide" style="position:relative;">
+				<div style="left:-5px;height:100%;width:105%;position: absolute;z-index: -10" class="bean blur"></div>
+				<div style="z-index: 10;padding-top:75px;position: absolute;">
+					<h3>Connect with old friends and meet new ones at the hottest events</h3>
+				</div>
+			</ion-slide>
+			<ion-slide class="slider-slide tiesto">
+				<div style="left:-5px;height:100%;width:105%;position: absolute;z-index: -10" class="tiesto blur"></div>
+				<div transit="{ 'move == true' : { 'top' : '400px' } }" style="z-index: 10;padding-top:200px;position: absolute;">
+					<h3 class="white">Don't follow the crowd? Make your own move</h3>
+					<button ng-click="move=true" class="button button-light">Let's go</button>
+				</div>
+				<div style="z-index: 10;padding-top:150px;" ng-show="move" ng-click="pushHome()">
+					<button ng-if="move" class="animate-if button button-positive icon-left ion-social-facebook">Connect with Facebook</button>
+					
+					<p>or</p>
+
+					<h4 ng-if="move" class="animate-if" style="background-color:none">Continue as an anonymous user </h4>
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+</div>

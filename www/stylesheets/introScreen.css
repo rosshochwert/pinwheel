@@ -1,0 +1,102 @@
+.slider {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(/fonts/openSans.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(/fonts/raleWay.woff) format('woff');
+}
+
+.slider-slide {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.white{
+  color: white !important;
+}
+
+.blur{
+  -webkit-filter: blur(1px);
+  -webkit-filter: hue-rotate(20deg);
+
+}
+
+.animate-if {
+  background:white;
+  border:1px solid black;
+  padding:10px;
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  -webkit-transition-delay: .3s;
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+h4,h3,h2,p,h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bean{
+  background: url(http://localhost/images/Bean.jpg) no-repeat center center fixed !important; 
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.tiesto{
+  background: url(http://localhost/images/Tiesto.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bonfire{
+  background: url(http://localhost/images/HumanBonfire.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
