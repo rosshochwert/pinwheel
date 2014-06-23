@@ -7,8 +7,10 @@ introScreenApp.controller('IntroCtrl', function($scope, $location, IntroScreenRe
 
   $scope.pushHome = function() {
 
+    steroids.view.navigationBar.show("");
+
     homeView = new steroids.views.WebView({
-      location: "/views/main/index.html",
+      location: "/views/home/index.html",
       id: "homeView"
     });
 
@@ -16,8 +18,8 @@ introScreenApp.controller('IntroCtrl', function($scope, $location, IntroScreenRe
       view: homeView,
     }, {
       onSuccess: function() {
+          steroids.view.navigationBar.show("");
           steroids.statusBar.show();
-          steroids.view.navigationBar.show();
       },
       onFailure: function(error) {
         alert("Could not replace the layer stack: " + error.errorDescription);
@@ -51,24 +53,6 @@ introScreenApp.controller('IntroCtrl', function($scope, $location, IntroScreenRe
   }
 
 });
-
-// Helper function for opening new webviews
-// $scope.open = function(id) {
-//   webView = new steroids.views.WebView("/views/introScreen/show.html?id="+id);
-//   steroids.layers.push(webView);
-// };
-
-// // Fetch all objects from the local JSON (see app/models/introScreen.js)
-// IntroScreenRestangular.all('introScreen').getList().then( function(introScreens) {
-//   $scope.introScreens = introScreens;
-// });
-
-// // Native navigation
-// steroids.view.navigationBar.show("IntroScreen index");
-// steroids.view.setBackgroundColor("#FFFFFF");
-
-//});
-
 
 // Show: http://localhost/views/introScreen/show.html?id=<id>
 introScreenApp.controller('LoginCtrl', function($scope) {

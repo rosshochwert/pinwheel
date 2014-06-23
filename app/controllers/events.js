@@ -3,13 +3,13 @@ var eventsApp = angular.module('eventsApp', ['ngTouch', 'ionic']);
 eventsApp.controller("CreateCtrl", function($scope) {
 
 	var imageButton = new steroids.buttons.NavigationBarButton();
-	imageButton.imagePath = "/icons/settings@2x.png";
+	imageButton.imagePath = "/icons/cancel@2x.png";
 	imageButton.onTap = function() {
 		closeModal();
 	};
 
 	var createButton = new steroids.buttons.NavigationBarButton();
-	createButton.textContent = "Create";
+	createButton.title = "Create";
 	createButton.onTap = function() {
 		closeModal();
 	};
@@ -33,4 +33,8 @@ eventsApp.controller("CreateCtrl", function($scope) {
 		steroids.modal.hide();
 	};
 
+});
+
+eventsApp.controller("IndividualCtrl", function($scope) {
+	steroids.view.navigationBar.update("XYZ Event");
 });

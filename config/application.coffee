@@ -4,7 +4,7 @@
 steroids.config.name = "theMove"
 
 # ## Start Location
-steroids.config.location = "http://localhost/views/introScreen/intro.html"
+steroids.config.location = "http://localhost/views/home/index.html"
 
 # ## Tab Bar
 # steroids.config.tabBar.enabled = true
@@ -41,6 +41,10 @@ steroids.config.preloads = [
   {
     id: "createEventView"
     location: "http://localhost/views/events/create.html"
+  }
+  {
+    id: "individualEventView"
+    location: "http://localhost/views/events/individualEvent.html"
   }
 ]
 
@@ -79,7 +83,7 @@ steroids.config.navigationBar.buttonTintColor = "#ffffff"
 steroids.config.loadingScreen.tintColor = "#262626"
 
 # ## iOS Status Bar
-steroids.config.statusBar.enabled = false
+steroids.config.statusBar.enabled = true
 steroids.config.statusBar.style = "default"
 
 # ## File Watcher

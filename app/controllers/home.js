@@ -1,10 +1,17 @@
 var homeApp = angular.module('homeApp', ['HomeModel', 'ngTouch', 'ionic']);
 
 homeApp.controller("IndexCtrl", function($scope) {
+	
+	steroids.view.navigationBar.show("");
 
 	var drawerView = new steroids.views.WebView({
 		location: "/views/home/drawer.html",
 		id: "drawerView"
+	});
+
+	var individualEventView = new steroids.views.WebView({
+		location: "/views/event/individualEvent.html",
+		id: "individualEventView"
 	});
 
 	var createEventView = new steroids.views.WebView({
@@ -40,6 +47,11 @@ homeApp.controller("IndexCtrl", function($scope) {
 
 		});
 	};
+
+	$scope.pushEvent = function(){
+		steroids.layers.push(individualEventView);
+	};
+
 
 	var openDrawer = function() {
 		steroids.drawers.show({
