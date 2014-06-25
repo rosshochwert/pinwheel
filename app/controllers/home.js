@@ -3,6 +3,7 @@ var homeApp = angular.module('homeApp', ['HomeModel', 'ngTouch', 'ionic']);
 homeApp.controller("IndexCtrl", function($scope) {
 	
 	steroids.view.navigationBar.show("");
+	steroids.view.navigationBar.show("");
 
 	var drawerView = new steroids.views.WebView({
 		location: "/views/home/drawer.html",
