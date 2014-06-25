@@ -24,4 +24,5 @@
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="DisableDoubleTapToFocus" value="true" />
     <preference name="ViewIgnoresStatusBar" value="false" />
+
 </widget>

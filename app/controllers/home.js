@@ -1,7 +1,7 @@
-var homeApp = angular.module('homeApp', ['HomeModel', 'ngTouch', 'ionic']);
+var homeApp = angular.module('homeApp', ['HomeModel', 'ngTouch', 'ionic', 'google-maps']);
 
 homeApp.controller("IndexCtrl", function($scope) {
-	
+
 	steroids.view.navigationBar.show("");
 	steroids.view.navigationBar.show("");
 
@@ -26,6 +26,21 @@ homeApp.controller("IndexCtrl", function($scope) {
 		openDrawer();
 	};
 
+	$scope.map = {
+		center: {
+			latitude: 45,
+			longitude: -73
+		},
+		options: {
+          disableDefaultUI: true,
+          panControl: false,
+          navigationControl: false,
+          scrollwheel: false,
+          scaleControl: false
+        },
+		zoom: 8
+	};
+
 	var createButton = new steroids.buttons.NavigationBarButton();
 	createButton.imagePath = "/icons/plus@2x.png";
 	createButton.onTap = function() {
@@ -40,7 +55,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 			disableAnimation: false
 		}, {
 			onSuccess: function() {
-				
+
 			},
 			onFailure: function(error) {
 				alert("Could not present the modal: " + error.errorDescription + " Sorry try again later. ");
@@ -49,7 +64,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 		});
 	};
 
-	$scope.pushEvent = function(){
+	$scope.pushEvent = function() {
 		steroids.layers.push(individualEventView);
 	};
 

@@ -11,3 +11,5 @@
   font-weight: 400;
   src: local('Raleway'), url(/fonts/raleway.woff) format('woff');
 }
+
+.angular-google-map-container { height: 400px; }
