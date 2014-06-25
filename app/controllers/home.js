@@ -70,7 +70,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 
 		},
 		onFailure: function() {
-			alert("Failed to update the navigation bar.");
+			alert("Failed to update the navigation bar. This sucks");
 		}
 	});
 
