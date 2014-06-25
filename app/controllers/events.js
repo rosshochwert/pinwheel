@@ -1,6 +1,6 @@
 var eventsApp = angular.module('eventsApp', ['ngTouch', 'ionic']);
 
-eventsApp.controller("CreateCtrl", function($scope) {
+eventsApp.controller("CreateCtrl",            function($scope) {
 
 	var imageButton = new steroids.buttons.NavigationBarButton();
 	imageButton.imagePath = "/icons/cancel@2x.png";
