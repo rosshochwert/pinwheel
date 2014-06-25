@@ -42,7 +42,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 				
 			},
 			onFailure: function(error) {
-				alert("Could not present the modal: " + error.errorDescription);
+				alert("Could not present the modal: " + error.errorDescription + " Sorry try again later. ");
 			}
 
 		});
