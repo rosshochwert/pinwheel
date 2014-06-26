@@ -1984,7 +1984,6 @@ body, .ionic-body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;

@@ -1,8 +1,73 @@
-var homeApp = angular.module('homeApp', ['HomeModel', 'ngTouch', 'ionic']);
+var homeApp = angular.module('homeApp', ['HomeModel', 'ionic', 'google-maps']);
 
 homeApp.controller("IndexCtrl", function($scope) {
-	
-	steroids.view.navigationBar.show("");
+
+	//google.maps.event.addDomListener(window, 'load', initialize);
+
+	function initialize() {
+		var mapOptions = {
+			center: new google.maps.LatLng(-34.397, 150.644),
+			zoom: 8
+		};
+		var map = new google.maps.Map(document.getElementById("map-canvas"),
+			mapOptions);
+	}
+
+	$scope.map = {
+		center: {
+			latitude: 45,
+			longitude: -73
+		},
+		options: {
+			disableDefaultUI: true,
+		},
+		markers: [{
+			id: 1,
+			latitude: 45,
+			longitude: -74,
+			showWindow: false,
+			title: 'Marker 2'
+		}, {
+			id: 2,
+			latitude: 15,
+			longitude: 30,
+			showWindow: false,
+			title: 'Marker 2'
+		}, {
+			id: 3,
+			icon: 'assets/images/plane.png',
+			latitude: 37,
+			longitude: -122,
+			showWindow: false,
+			title: 'Plane'
+		}],
+		markers2: [{
+			id: 1,
+			icon: 'assets/images/blue_marker.png',
+			latitude: 46,
+			longitude: -77,
+			showWindow: false,
+			title: '[46,-77]'
+		}, {
+			id: 2,
+			icon: 'assets/images/blue_marker.png',
+			latitude: 33,
+			longitude: -77,
+			showWindow: false,
+			title: '[33,-77]'
+		}, {
+			id: 3,
+			icon: 'assets/images/blue_marker.png',
+			latitude: 35,
+			longitude: -125,
+			showWindow: false,
+			title: '[35,-125]'
+		}],
+		draggable: "true",
+		dragging: false,
+		zoom: 8
+	};
+
 	steroids.view.navigationBar.show("");
 
 	var drawerView = new steroids.views.WebView({
@@ -40,7 +105,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 			disableAnimation: false
 		}, {
 			onSuccess: function() {
-				
+
 			},
 			onFailure: function(error) {
 				alert("Could not present the modal: " + error.errorDescription + " Sorry try again later. ");
@@ -49,7 +114,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 		});
 	};
 
-	$scope.pushEvent = function(){
+	$scope.pushEvent = function() {
 		steroids.layers.push(individualEventView);
 	};
 
