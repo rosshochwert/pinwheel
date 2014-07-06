@@ -11,3 +11,8 @@
   font-weight: 400;
   src: local('Raleway'), url(/fonts/raleway.woff) format('woff');
 }
+
+#map-canvas
+{
+	height: 100%;
+}

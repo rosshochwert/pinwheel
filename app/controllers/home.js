@@ -4,7 +4,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 	
 	steroids.view.navigationBar.show("");
 	steroids.view.navigationBar.show("");
-
+	
 	var drawerView = new steroids.views.WebView({
 		location: "/views/home/drawer.html",
 		id: "drawerView"
@@ -74,8 +74,7 @@ homeApp.controller("IndexCtrl", function($scope) {
 			alert("Failed to update the navigation bar. This sucks");
 		}
 	});
-
-
+	
 });
 
 homeApp.controller("DrawerCtrl", function($scope) {
